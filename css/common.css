@@ -30,13 +30,13 @@ h1, h2, h3 {
 }
 
 a {
-    color: #ffffff !important;
+    color: #ffffff;
     outline: none;
 
 }
 
 a:hover {
-    color: #cccccc !important;
+    color: #ccc;
     text-decoration: none !important;
     outline: none;
 
@@ -352,6 +352,12 @@ footer h2{
     display: block;
     color:#434345;
 
+}
+.team p a{
+    color:#408aa6 ;
+}
+.team p a:hover{
+    color:#2b687f ;
 }
 .team div p{
     text-align: center;
