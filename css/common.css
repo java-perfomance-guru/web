@@ -303,6 +303,7 @@ p {
     width: 100%;
     max-width: 270px;
     margin: 0 auto 30px;
+    overflow: hidden;
 }
 .photoGuru img{
     position: absolute;
@@ -354,7 +355,11 @@ footer h2{
 
 }
 .team p a{
-    color:#408aa6 ;
+    color:#408aa6;
+    -webkit-transition: all 0.32s linear;
+        -moz-transition: all 0.32s linear;
+        -o-transition: all 0.32s linear;
+        transition: all 0.32s linear;
 }
 .team p a:hover{
     color:#2b687f ;
