@@ -531,3 +531,7 @@ footer p span {
     width:100%;
   opacity:1;
 }
+.wrapper{
+    overflow: hidden;
+
+}
