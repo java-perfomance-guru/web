@@ -36,6 +36,9 @@
 }
 
 @media (max-width: 979px) {
+    .pixBox p {
+        font-size: 15px;
+    }
     .nav_up .menulist li a {
         letter-spacing: 2px;
         font-size: 12px;
@@ -43,7 +46,7 @@
     }
 
     .logo a {
-        min-height: 35px;
+        min-height: 30px;
         background-size: contain;
     }
     .z_scroll .logo a{
@@ -87,6 +90,92 @@
     .z_scroll .nav_up{
         height: 90px;
     }
+    .emergency{
+        margin-top: 20px;
+        position: inherit;
+        height: auto;
+    }
+    .services p{
+        font-size: 14px;
+    }
+    .one, .second, .thirt, .fourth, .fifth, .sixth, .seventh, .eighth {
+        position: inherit;
+        top: auto;
+        left: auto;
+        bottom: auto;
+        right: auto;
+    }
+
+    .one {
+        /*border: 2px solid #c1272e;*/
+        margin-bottom: 45px;
+        /*background: url("../img/1serviseO.svg") no-repeat scroll 78% 64% #f4f3f0;*/
+    }
+
+    .second {
+        /*background: url("../img/1serviseO.svg") no-repeat scroll 6% 50% #f4f3f0;*/
+        /*border: 2px solid #fbaf3c;*/
+        margin-top: 15px;
+    }
+
+    .thirt {
+        /*background: url("../img/2serviseO.svg") no-repeat scroll 120% 13% #f4f3f0;*/
+        border-bottom: 2px solid #eeeeee;
+        margin-top: 55px;
+        padding-bottom: 10px;
+
+    }
+
+    .fourth {
+        /*background: url("../img/2serviseO.svg") no-repeat scroll 30%% 50% #f4f3f0;*/
+        /*border: 2px solid #fbaf3c;*/
+        margin-bottom: 20px;
+
+    }
+    .fifth{
+        margin-top:20px;
+        padding-bottom: 10px;
+    }
+
+    .sixth {
+        border-top: 2px solid #eeeeee;
+        /*margin-top: 55px;*/
+        margin-bottom: 45px;
+    }
+    .seventh{
+        margin-top: 30px;
+
+    }
+    .eighth{
+        margin-bottom: 45px;
+    }
+
+    .servicePix{
+        border-top: 2px solid #eeeeee;
+        border-bottom: 2px solid #eeeeee;
+    }
+    .servicePix.servicesOne {
+        content: url("../img/1servise.png");
+    }
+
+    .servicePix.servicesTwo{
+        content: url("../img/2servise.png");
+    }
+
+    .servicePix.servicesThree {
+        content: url("../img/3servise.png");
+    }
+    .team, .clients{
+        padding: 55px 0;
+    }
+    .team h2, footer h2{
+        font-size: 24px;
+        line-height: 32px;
+        margin-bottom: 55px;
+    }
+    .team .row{
+        margin-bottom: 0px;
+    }
 
 
 }
@@ -96,6 +185,20 @@
 }
 
 @media (max-width: 768px) {
+    .clients ul li{
+        margin-right: 10px;
+    }
+    .clients ul li img {
+        height: 40px;
+        margin: 15px 0;
+    }
+    footer p, footer p span{
+        font-size: 18px;
+    }
+    .team div p{
+           min-height:inherit;
+           margin-bottom: 20px;
+       }
     .emergency img {
         left: -41%;
         position: relative;
@@ -105,10 +208,6 @@
 
     .pixBox h2 {
         font-size: 22px;
-    }
-
-    .pixBox p {
-        font-size: 13px;
     }
 
     .header {
@@ -122,18 +221,21 @@
            height: 64px;
        }
     .z_scroll .logo a{
-        min-height: 35px;
+        min-height: 30px;
         margin-top: 5px;
     }
     .z_scroll .nav_up .menulist{
-        margin-top: 64px;
+        margin-top: 80px;
     }
     .nav_up .btn-local:hover{
-           background: rgba(0, 0, 0, 0.4);
+        background: rgba(0, 0, 0, 0.4);
+        color:#808080 ;
        }
+
     .nav_up .btn-local,
-    .z_scroll .nav_up .btn-local{
-        margin-top: 20px;
+    .z_scroll .nav_up .btn-local {
+        margin: 20px 0 20px 45px;
+        width: 70%;
     }
     .scrollh1 {
         font-size: 18px;
@@ -151,7 +253,7 @@
 }
 
     .logo {
-        left: 50px;
+        left: 25px;
         position: absolute;
         top: 10px;
     }
@@ -160,9 +262,13 @@
         color: transparent;
     }
     .nav_up .menulist {
-        margin-left: 60px;
+        margin-left: 37px;
         margin-top: 64px;
         padding: 0;
+    }
+    .nav_up{
+        width: -webkit-calc(100% - 1rem );
+         width: calc(100% - 1rem);
     }
 
 
@@ -245,7 +351,7 @@
   opacity: 0;
 }
 .menu.active {
-  width: -webkit-calc(100% );
+  width: -webkit-calc(100%);
   width: calc(100%);
   opacity: 1;
 
@@ -301,10 +407,10 @@
   .menu-inner {
     display: block;
   }
-  .menu-link {
+  /*.menu-link {*/
     /*padding: 5px 0;*/
     /*font-size: 1.2em;*/
-  }
+  /*}*/
   /*.menu.active {*/
     /*width: -webkit-calc(100% - 0.5rem);*/
     /*width: calc(100% - 0.5rem);*/
@@ -318,7 +424,7 @@
         min-height: 400px;
     }
     .emergency{
-        margin-top: 5px;
+        margin-top: 20px;
     }
 }
 
@@ -341,6 +447,9 @@
     .header {
         min-height: 300px;
     }
+    .pixBox p {
+            font-size: 13px;
+        }
 
 }
 
