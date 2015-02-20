@@ -213,19 +213,24 @@
     .header {
         min-height: 400px;
     }
+    .z_scroll .nav_up {
+        height: 40px;
+        padding: 0;
+    }
 
-    .wrapper.z_scroll .header{
-        /*display: none;*/
+    .logo a {
+        min-height: 25px;
+        background-size: contain;
+        margin-top: 2px;
     }
-    .z_scroll .nav_up{
-           height: 64px;
-       }
-    .z_scroll .logo a{
-        min-height: 30px;
-        margin-top: 5px;
+
+    .z_scroll .logo a {
+        min-height: 25px;
+        margin-top: 2px;
     }
+
     .z_scroll .nav_up .menulist{
-        margin-top: 80px;
+        margin-top: 64px;
     }
     .nav_up .btn-local:hover{
         background: rgba(0, 0, 0, 0.4);
@@ -251,11 +256,17 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+    .logo a{
+        display: none;
+    }
 
+    .active .logo a{
+        display: block;
+    }
     .logo {
         left: 25px;
         position: absolute;
-        top: 10px;
+        top: 5px;
     }
     .nav_up .menulist li{
         float: none;
@@ -266,10 +277,7 @@
         margin-top: 64px;
         padding: 0;
     }
-    .nav_up{
-        width: -webkit-calc(100% - 1rem );
-         width: calc(100% - 1rem);
-    }
+
 
 
 .menu-opener, .menu-opener:hover, .menu-opener.active, .menu-opener-inner, .menu-opener-inner::before, .menu-opener-inner::after, .menu, .menu.active {
@@ -279,7 +287,8 @@
 
 .menu-opener {
   cursor: pointer;
-  height: 64px;
+  height: 40px;
+  padding: 0;
   position: fixed;
   top: 2%;
   left: 1%;
@@ -287,9 +296,15 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  /*width: 64px;*/
+  width: 41px;
 }
-.z_scrol .menu-opener{
+
+    .nav_up.menu-opener.active {
+        width: -webkit-calc(100% - 1rem);
+        width: calc(100% - 1rem);
+    }
+
+    .z_scrol .menu-opener{
     position: fixed;
 }
 
