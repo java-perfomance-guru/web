@@ -3,6 +3,7 @@
     padding: 0;
 }
 
+
 body {
     font-family: "myriad pro";
     background-color: #fffcf4;
@@ -46,15 +47,6 @@ p {
     color: #67818f;
     font-family: "Proxima Nova";
 
-}
-
-.nav_up {
-    background: rgba(0, 0, 0, 0.8);
-    position: absolute;
-    top: 0;
-    height: 80px;
-    width: 100%;
-    padding-top: 10px;
 }
 
 .nav_up .menulist {
@@ -107,8 +99,6 @@ p {
 }
 
 .header {
-    /*background: url("../img/bgHeader.jpg") center top no-repeat transparent;*/
-    /*background-size: cover;*/
     width: 100%;
     min-height: 1050px;
     position: relative;
@@ -172,7 +162,6 @@ p {
 }
 
 .pixBox{
-    /*min-height: 595px;*/
 }
 .pixBox.perfomanceProblems{
     background: url("../img/perfomance.jpg") 0 0 no-repeat transparent;
@@ -219,10 +208,6 @@ p {
 }
 
 .wrapper.z_scroll .ferraryPix {
-    /*margin-left: 3px;*/
-    /*margin-top: 51px;*/
-    /*width: 1097px;*/
-    /*bottom: 0;*/
     opacity: 0;
 }
 /*.windowMock{*/
@@ -418,11 +403,12 @@ footer p span {
     margin-top: 20px;
 }
 .nav_up{
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.6);
      height: 90px;
      left: 0;
      position: fixed;
      top: 0;
+     padding-top: 10px;
      transition: all 500ms ease 0s;
      visibility: visible;
      width: 100%;
@@ -539,4 +525,55 @@ footer p span {
 }
 .lesspix{
        display: none;
-   }
+}
+
+.main-box .presentation-title {
+    -moz-animation: ptitle 1.5s alternate;
+    -webkit-animation: ptitle 1.5s alternate;
+    -ms-animation: ptitle 1.5s alternate;
+}
+
+@-moz-keyframes ptitle {
+    0% {
+        right: -500px;
+        opacity: 0;
+    }
+    70% {
+        right: -500px;
+        opacity: 0;
+    }
+    100% {
+        right: -110px;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes ptitle {
+    0% {
+        right: -500px;
+        opacity: 0;
+    }
+    70% {
+        right: -500px;
+        opacity: 0;
+    }
+    100% {
+        right: -110px;
+        opacity: 1;
+    }
+}
+
+@-ms-keyframes ptitle {
+    0% {
+        right: -500px;
+        opacity: 0;
+    }
+    70% {
+        right: -500px;
+        opacity: 0;
+    }
+    100% {
+        right: -110px;
+        opacity: 1;
+    }
+}
