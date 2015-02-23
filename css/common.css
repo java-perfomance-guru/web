@@ -13,7 +13,8 @@ h1, h2, h3 {
     color: #fffcf4;
     font-weight: 100;
     letter-spacing: 1px;
-    font-family: "Proxima Nova";
+    /*font-family: "Proxima Nova";*/
+    font-family: 'Ubuntu', sans-serif;
 
 }
 
@@ -69,10 +70,11 @@ p {
 }
 
 .nav_up .menulist li a {
-    font-family: "Proxima Nova";
-    letter-spacing: 3px;
-    font-size: 15px;
-    font-weight: 100;
+    /*font-family: "Proxima Nova";*/
+    letter-spacing: 2px;
+    font-family: 'Source Code Pro', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
     text-transform: uppercase;
     -webkit-transition: all 0.32s linear;
     -moz-transition: all 0.32s linear;
@@ -120,12 +122,14 @@ p {
 }
 
 .btn-local {
+    font-family: 'Source Code Pro', sans-serif;
     border: 1px solid #ffffff;
     opacity: 0.8;
+    font-weight: 300;
     border-radius: 0;
     font-size: 14px;
     height: 30px;
-    line-height: 30px;
+    line-height:27px;
     text-transform: uppercase;
     padding: 0 12px;
     outline: none;
@@ -137,6 +141,7 @@ p {
 
 .btn-local:hover {
     opacity: 0.6;
+    color: #ffffff;
 }
 
 .nav_up .btn-local {
@@ -199,9 +204,10 @@ p {
     margin-top: 55px;
 }
 .pixBox p {
-    color: #fffcf4;
+    color: #f6f8ed;
     font-size: 17px;
     font-family: "Proxima Nova";
+    font-weight: 100;
 }
 .pixBox p h2{
     font-size: 30px;
@@ -240,9 +246,11 @@ p {
 }
 
 .scrollh1 {
+    /*font-family: 'Sorts Mill Goudy',Georgia,serif;*/
+    /*font-family: 'Rosario', sans-serif;*/
     bottom: 20%;
     color: #ffffff;
-    font-size: 55px;
+    font-size: 45px;
     opacity: 1;
     position: absolute;
     z-index: 10;
@@ -253,7 +261,7 @@ p {
 
 .wrapper.z_scroll .scrollh1 {
     /*opacity: 0;*/
-    font-size: 45px;
+    font-size: 35px;
     bottom: 5%;
 
 
@@ -301,28 +309,33 @@ p {
 .team{
     padding: 100px 0;
 }
+.team h2{
+}
 
-.team h2,
-footer h2{
-    color: #3c3c3c;
+.team h2, footer h2{
+    color: #757575;
     font-size: 32px;
     line-height: 50px;
     margin: 0 auto 80px;
     text-align: center;
     width: 90%;
 }
+.team h2 span.gorLine{
+    margin: 40px auto 20px;
+    width: 52px;
 
+}
 .team span.gorLine {
     text-align: center;
     margin: 10px auto 20px;
     display: block;
     height: 2px;
-    border-bottom:2px solid #434345;
+    border-bottom:2px solid #757575;
     width: 52px;
-}
-.team .col-lg-3 span.gorLine {
     width: 30px;
+
 }
+
 .team div span{
     font-size: 16px;
     text-transform: uppercase;
@@ -352,7 +365,7 @@ footer h2{
 }
 .team div p{
     text-align: center;
-    color: #434345;
+    color: #777880;
     width: 80%;
     margin: 0 auto;
     font-size: 14px;
@@ -390,7 +403,7 @@ footer p{
     font-size: 32px;
     text-transform: uppercase;
     font-family: "Proxima Nova";
-    color: #3c3c3c;
+    color: #434345;
     text-align: center;
     font-weight: 100;
 }
@@ -426,7 +439,7 @@ footer p span {
 .services p {
     font-size: 15px;
     font-weight: 100;
-    color: #32333b;
+    color: #777880;
 }
 
 .services h3 {
