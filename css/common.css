@@ -38,7 +38,7 @@ a {
 }
 
 a:hover {
-    color: #ccc;
+    /*color: #ccc;*/
     text-decoration: none !important;
     outline: none;
 
@@ -69,6 +69,7 @@ p {
     color: #ffffff;
 }
 
+
 .nav_up .menulist li a {
     /*font-family: "Proxima Nova";*/
     letter-spacing: 2px;
@@ -80,6 +81,9 @@ p {
     -moz-transition: all 0.32s linear;
     -o-transition: all 0.32s linear;
     transition: all 0.32s linear;
+}
+.nav_up .menulist li a:hover{
+    color:#bcbcbc;
 }
 
 .logo a {
@@ -97,7 +101,7 @@ p {
 }
 .z_scroll .logo a {
     min-height: 46px;
-    margin-top: 0px;
+    margin-top: -2px;
 }
 
 .header {
@@ -142,6 +146,7 @@ p {
 .btn-local:hover {
     opacity: 0.6;
     color: #ffffff;
+    background:#282828 ;
 }
 
 .nav_up .btn-local {
