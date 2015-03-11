@@ -71,5 +71,9 @@ $(document).ready(function () {
         $(".menu-opener, .menu-opener-inner, .menu").toggleClass("active");
     });
 
+    if (isMobile.any) {
+             $('.emergency span b').css({"color": "#100709"})
+        }
+
 
 });
