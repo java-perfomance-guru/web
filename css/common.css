@@ -13,7 +13,6 @@ h1, h2, h3 {
     color: #fffcf4;
     font-weight: 100;
     letter-spacing: 1px;
-    /*font-family: "Proxima Nova";*/
     font-family: 'Ubuntu', sans-serif;
 
 }
@@ -38,10 +37,12 @@ a {
 }
 
 a:hover {
-    /*color: #ccc;*/
     text-decoration: none !important;
     outline: none;
 
+}
+span{
+   color: #100709;
 }
 
 p {
@@ -71,7 +72,6 @@ p {
 
 
 .nav_up .menulist li a {
-    /*font-family: "Proxima Nova";*/
     letter-spacing: 2px;
     font-family: 'Source Code Pro', sans-serif;
     font-size: 14px;
@@ -119,7 +119,6 @@ p {
     background: url("../img/bgHeader.jpg") center top no-repeat transparent;
     background-size: cover;
     width: 100%;
-    /*min-height: 1100px;*/
     position: relative;
     overflow: hidden;
 
@@ -164,7 +163,6 @@ p {
 .ferraryPix {
     width: 100%;
     position: absolute;
-    /*bottom: 0;*/
     -webkit-transition: all 0.52s linear;
     -moz-transition: all 0.52s linear;
     -o-transition: all 0.52s linear;
@@ -231,20 +229,6 @@ p {
 .wrapper.z_scroll .ferraryPix {
     opacity: 0;
 }
-/*.windowMock{*/
-    /*background: url("../img/ferrarycar.jpg") center top no-repeat transparent;*/
-       /*display: block;*/
-       /*height: 100%;*/
-       /*background-size: cover;*/
-       /*min-height: 1100px;*/
-       /*min-width: 1600px;*/
-       /*width: 100%;*/
-    /*-webkit-transition: all 0.52s linear;*/
-       /*-moz-transition: all 0.52s linear;*/
-       /*-o-transition: all 0.52s linear;*/
-       /*transition: all 0.52s linear;*/
-/*}*/
-
 
 .wrapper.z_scroll .windowMock{
     background: url("../img/windowMock.png") 0 0 no-repeat transparent;
@@ -261,8 +245,6 @@ p {
 }
 
 .scrollh1 {
-    /*font-family: 'Sorts Mill Goudy',Georgia,serif;*/
-    /*font-family: 'Rosario', sans-serif;*/
     bottom: 20%;
     color: #ffffff;
     font-size: 45px;
@@ -275,11 +257,8 @@ p {
 }
 
 .wrapper.z_scroll .scrollh1 {
-    /*opacity: 0;*/
     font-size: 35px;
     bottom: 5%;
-
-
 
 }
 .emergency{
@@ -287,6 +266,7 @@ p {
     background: url("../img/alarm.png") right top no-repeat transparent;
     height: 80px;
     margin-top: 80px;
+    color: #100709;
 
 }
 
@@ -605,3 +585,4 @@ footer p span {
         opacity: 1;
     }
 }
+
