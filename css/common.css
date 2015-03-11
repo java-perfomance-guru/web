@@ -269,6 +269,11 @@ p {
     color: #100709;
 
 }
+.emergency span{
+    margin-top: 40px;
+    text-align: center;
+    display: block;
+}
 
 .emergency span i {
     font-style: normal;
@@ -279,12 +284,12 @@ p {
 
 }
 
-.emergency span {
+.emergency span b {
     color: #100709;
     font-size: 22px;
     display: block;
     text-align: center;
-    margin-top: 40px;
+    font-weight: normal;
 }
 .photoGuru{
     min-height: 300px;
