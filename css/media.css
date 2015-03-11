@@ -478,7 +478,27 @@
         width: 100%;
         z-index: 2
        }
+    .wrapper.z_scroll .ferraryPix{
+        opacity: 1;
+    }
+    .wrapper.z_scroll .windowMock{
+        background: none;
+        bottom: auto;
+        height: auto;
+        margin-left: inherit;
+        width: auto;
+        position: inherit;
+        overflow: visible;
+        left: inherit;
 
+    }
+    .wrapper.z_scroll .header{
+        background:none;
+    }
+    .wrapper.z_scroll .scrollh1{
+        font-size: 18px;
+        bottom: 20%;
+    }
 }
 
 @media (max-width: 440px) {
