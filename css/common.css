@@ -171,7 +171,17 @@ p {
     transition: all 0.52s linear;
 }
 
-.pixBox{
+.pixBox a {
+    color: #999999;
+    -webkit-transition: all 0.32s linear;
+    -moz-transition: all 0.32s linear;
+    -o-transition: all 0.32s linear;
+    transition: all 0.32s linear;
+
+}
+
+.pixBox a:hover {
+    color: #666666;
 }
 .pixBox.perfomanceProblems{
     background: url("../img/perfomance.jpg") 0 0 no-repeat transparent;
