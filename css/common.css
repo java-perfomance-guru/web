@@ -223,7 +223,7 @@ p {
     font-weight: 100;
 }
 .pixBox p h2{
-    font-size: 30px;
+    font-size: 35px;
 }
 
 .wrapper.z_scroll .ferraryPix {
@@ -479,7 +479,7 @@ footer p span {
 .fourth {
     position: absolute;
     left: 3%;
-    top: 6%;
+    top: 15%;
 }
 
 .fourth h3 {
