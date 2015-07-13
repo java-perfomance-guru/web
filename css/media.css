@@ -6,7 +6,6 @@
     .header {
         min-height: 800px;
     }
-
 }
 
 @media (max-width: 1200px) {
@@ -29,20 +28,12 @@
 }
 
 @media (max-width: 979px) {
-    img.servicePix{
-           display: inline;
-       }
-    .cd-svg-container,
-    svg{
-        display: none;
-    }
-
     .pixBox p {
         font-size: 15px;
     }
 
     .nav_up .menulist li a {
-        letter-spacing: 1px;
+        letter-spacing: 2px;
         font-size: 12px;
         text-transform: uppercase;
     }
@@ -191,14 +182,6 @@
 }
 
 @media (max-width: 768px) {
-
-    .nav_up .menulist li a {
-           font-size: 14px;
-           letter-spacing: 1px;
-           line-height: 30px;
-           text-transform: uppercase;
-       }
-
     .clients ul li {
         margin-right: 10px;
     }
@@ -448,7 +431,6 @@
     .menu-link li {
         margin: auto;
     }
-
 }
 
 @media screen and (max-width: 768px) {

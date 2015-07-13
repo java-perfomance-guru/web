@@ -1,0 +1,32 @@
+<div class="container-wrapper">
+	<div class="boldText">Question {{question.question.id}} of {{question.questionsCount}}</div>
+	<label class="form-ques">{{question.question.question}}</label>
+	<div class="form-group form-answ" ng-if="question.question.questionType === 'radio'">
+		<div class="radio" ng-repeat="answer in question.question.answers">
+			<label>
+				<input id="checkbox" class="regular-radio" type="{{question.question.questionType}}" name="1" required value="{{answer.id}}"><p for="checkbox"></p>{{answer.text}}
+			</label>
+		</div>
+	</div>
+	<div class="form-group form-answ" ng-if="question.question.questionType === 'checkbox'">
+		<div class="checkbox" ng-repeat="answer in question.question.answers">
+			<label>
+				<input id="checkbox" class="regular-checkbox" type="{{question.question.questionType}}" name="1" required value="{{answer.id}}"><p for="checkbox"></p>{{answer.text}}
+			</label>
+		</div>
+	</div>
+	<div class="form-group form-answ" ng-if="question.question.questionType === 'text'">
+		<div class="text" ng-repeat="answer in question.question.answers">
+			<label>
+				<input type="{{question.question.questionType}}" class="form-control" name="1" required value="{{answer.text}}" ng-change="formChanged">{{answer.text}}
+			</label>
+		</div>
+	</div>
+	<div class="form-group form-button row">
+		<button class="prevButton" ng-click="question.back()" ng-if="question.question.id > 1">
+			<h5>Back</h5></button>
+		<button class="nextButton" ng-click="question.next()" ng-disabled="myForm.$invalid" ng-if="question.question.id <= question.questionsCount">
+			<h5>Next question</h5>
+		</button>
+	</div>
+</div>

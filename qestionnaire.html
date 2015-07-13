@@ -1,78 +1,210 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="formApp">
+
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta http-equiv="Content-Type" content="text/html; 	" />
 	<meta name="format-detection" content="telephone=no" />
 	<title>Java Perfomance Guru</title>
+	<!-- css&font -->
 	<link href="dist/css/bootstrap.css" rel="stylesheet">
-	<link type="text/css" rel="stylesheet" href="css/common.css"/>
-	<link type="text/css" rel="stylesheet" href="css/media.css"/>
-	<link type="text/css" rel="stylesheet" href="css/animate.css"/>
-	<link rel="icon" href="img/favicon.ico" type="image/x-icon"/>
-
+	<link type="text/css" rel="stylesheet" href="css/commonQuestionnaire.css" />
+	<link type="text/css" rel="stylesheet" href="fonts/light/fonts.css" />
+	<link type="text/css" rel="stylesheet" href="css/media.css" />
+	<link type="text/css" rel="stylesheet" href="css/animate.css" />
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+	<link href='http://fonts.googleapis.com/css?family=Ubuntu|Source+Code+Pro:200,300,400,500,600|Rosario:700italic' rel='stylesheet' type='text/css'>
+	<!-- load angular, and ui-router -->
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.min.js"></script>
+	<script src="bower_components/underscore/underscore-min.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/app.constants.js"></script>
+	<script src="js/app.routes.js"></script>
+	<script src="js/question.ctrl.js"></script>
+	<script src="js/questions.ctrl.js"></script>
 </head>
-<body>
-<div class="poolPage">
 
-<div class="container">
-
-
-<a class="logoGrey"><img src="img/logoGrey.png"/></a>
-
-
-
-<div class="steps col-lg-12">
-	<ul>
-		<li class="firstStep"><span><b>1</b></span>
-		<h4>Hi Name! Need advise?</h4>
-		</li>
-		<li class="secondStep"><span><b>2</b></span>
-		<h4>
-			Pass this passage of the questionnaire for better problem detection</h4>
-			<button>start questionnaire</button>
-		</li>
-		<li class="thirdStep"><span><b>3</b></span>
-		<h4>Let's discuss!</h4>
-		</li>
-	</ul>
-</div>
-
-<!--<h1>Questionnaire</h1>-->
-
-<!--<h3>Hi Name!<br/>-->
-	<!--go to the passage of the questionnaire </h3>-->
-
-<!--<button>Go to questionnaire</button>-->
-
-
-</div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-<script type="text/javascript" src="js/jquery-1.8.3/jquery-1.8.3.min.js"></script>
-<script src="dist/js/bootstrap.js"></script>
-<script src="dist/js/bootstrap.min.js"></script>
-
-
-<!--[if lt IE 9]>
-<script src="bootstrap-3.0.0/assets/js/html5shiv.js"></script>
-<script src="bootstrap-3.0.0/assets/js/respond.min.js"></script>
-<![endif]-->
-
-
-
-
+<body ng-controller="formController">
+	<div class="wrapper">
+		<div class="poolPage">
+			<nav class="nav_up menu-opener">
+				<div class="menu-opener-inner"></div>
+				<div class="container">
+					<div class="logo pull-left col-lg-5 col-md-5 col-xs-12">
+						<a href="#"></a>
+					</div>
+				</div>
+			</nav>
+			<div class="header" >
+				<p class="lead">
+					<h1 class="scrollh1">
+						Unveil the performance of your application
+					</h1>
+				</p>
+				<p class="lead">
+					<button class="startQuestionnaire btn" ng-click="startQuestionnaireFunction()">Start questionnaire</button>
+				</p>
+			</div>
+			<div id="steps" class="container fadeInUp">
+				<div class="steps col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<ul>
+						<li class="firstStep">
+							<h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia maxime quos recusandae deserunt repellat autem ipsa omnis eveniet, nobis repellendus!</h4>
+						</li>
+						<li class="secondStep">
+							
+							<form id="signup-form" name="myForm">
+								<div id="form-views" >
+									<div ui-view></div>
+								</div>
+							</form>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<section id="team" class="team">
+				<div class="container">
+					<h2>Our expert team is ready to solve any performance problem.
+						</h2>
+					<div class="row">
+						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+							<div class="photoGuru">
+								<img src="img/photo1.png" />
+								<img class="photoframe" src="img/photoframe.png" />
+							</div>
+							<span>Leon</span>
+							<b>JAVA &and; APM GURU</b>
+							<span class="gorLine"></span>
+							<p>Leon works with Java since 1996 and is an expert in high performance high traffic portals since 2003. He is not only
+								<a target="blank_" href="http://leon-rosenberg.net/01-2014-Java_aktuell_Sonderdruck_Leon_Rosenberg-Einfach_skalieren.pdf">a passionate Architect and SOA/MicroServices Evangelist</a>but also
+								<a href="https://speakerdeck.com/dvayanu/devops-at-runtime-ignite">a practicing DevOps</a>.
+								<br/>Leon is author and commiter of
+								<a target="blank_" href="http://www.moskito.org">MoSKito,</a>
+								<a target="blank_" href="http://www.configureme.org">ConfigureMe</a>and
+								<a target="blank_" href="http://www.distributeme.org">DistributeMe</a>open source projects.</p>
+						</div>
+						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+							<div class="photoGuru">
+								<img src="img/imgo.jpg" />
+								<img class="photoframe" src="img/photoframe.png" />
+							</div>
+							<span>Denis</span>
+							<b>MATH GURU</b>
+							<span class="gorLine"></span>
+							<p>Denis is all into Java since 2006. He is an applied mathematics Guru. He specializes in optimisation and complexity reduction algorithms, financial calculations and big data.</p>
+						</div>
+						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+							<div class="photoGuru">
+								<img src="img/michael.jpg" />
+								<img class="photoframe" src="img/photoframe.png" />
+							</div>
+							<span>Michael</span>
+							<b>JAVA GURU</b>
+							<span class="gorLine"></span>
+							<p>Michael works since 2001 as a freelance software developer and architect in enterprise scale environments. He programmed Java since 1998. He loves to do performance tuning and analysis and resolution of scaling or threading issues.
+								<br/>Michael is MoSKito commiter.</p>
+						</div>
+						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+							<div class="photoGuru">
+								<img src="img/frank.jpg" />
+								<img class="photoframe" src="img/photoframe.png" />
+							</div>
+							<span>Frank</span>
+							<b>NETWORK GURU</b>
+							<span class="gorLine"></span>
+							<p>Frank has over 10 years of experience in management and operation of high-performance web sites. He is also a Certified Cisco Engineer (CCIP) and Linux Debian Specialist. His passion is to solve NETWORK and LINUX problems for you.</p>
+						</div>
+					</div>
+					<div class="row fadeInUp">
+						<div class="col-lg-offset-3 col-md-offset-3 col-lg-3 col-md-3 col-sm-6 col-xs-12">
+							<div class="photoGuru">
+								<img src="img/martin.jpg" />
+								<img class="photoframe" src="img/photoframe.png" />
+							</div>
+							<span>Martin</span>
+							<b>SALES GURU</b>
+							<span class="gorLine"></span>
+							<p>A man of many words, Martin is your first point of contact, the helping hand, the nice boyscout leading the grandma over the street, the perfect son-in-law. The only
+								<i>normal</i>person in a bunch of techies, he do everything that is needed to solve your problem. Promised!</p>
+						</div>
+						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+							<div class="photoGuru">
+								<img src="img/moskito.png" />
+								<img class="photoframe" src="img/photoframe.png" />
+							</div>
+							<span>moskito</span>
+							<b>monitoring guru</b>
+							<span class="gorLine"></span>
+							<p>Founded in 2007
+								<a href="http://www.moskito.org" target="_blank">MoSKito</a>is the leading open source project in Application Performance Management (APM).
+								<a href="http://www.moskito.org" target="_blank">MoSKito</a>uniquely combines technical and business views on the application, providing a transparency on impact of technical problems onto business key figures.
+								<a href="http://www.moskito.org" target="_blank">MoSKito</a>can monitor single applications as well as clusters of servers and is free to use.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="references" class="clients">
+				<div class="container fadeInUp">
+					<ul>
+						<li>
+							<img src="img/client1.png" />
+						</li>
+						<li>
+							<img src="img/client2.png" />
+						</li>
+						<li>
+							<img src="img/client3.png" />
+						</li>
+						<li>
+							<img src="img/client4.png" />
+						</li>
+						<li>
+							<img src="img/client5.png" />
+						</li>
+						<li>
+							<img src="img/client6.png" />
+						</li>
+						<li>
+							<img src="img/client7.png" />
+						</li>
+						<li>
+							<img src="img/client12.png" />
+						</li>
+						<li>
+							<img src="img/client9.png" />
+						</li>
+						<li>
+							<img src="img/client10.png" />
+						</li>
+						<li>
+							<img src="img/client11.png" />
+						</li>
+						<li>
+							<img src="img/client13.png" />
+						</li>
+						<li>
+							<img src="img/client14.png" />
+						</li>
+					</ul>
+				</div>
+			</section>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jquery-1.8.3/jquery-1.8.3.min.js"></script>
+	<script src="dist/js/bootstrap.js"></script>
+	<script src="dist/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/commonQuestionnaire.js"></script>
+	<script type="text/javascript" src="js/johnpolacek-scrolldeck.js-5b7f0d4/js/jquery.scrollTo-1.4.3.1.min.js"></script>
+	<script type="text/javascript" src="js/johnpolacek-scrolldeck.js-5b7f0d4/js/jquery.scrollorama.js"></script>
+	<script type="text/javascript" src="js/johnpolacek-scrolldeck.js-5b7f0d4/js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="js/johnpolacek-scrolldeck.js-5b7f0d4/js/jquery.scrolldeck.js"></script>
+	<script type="text/javascript" src="js/isMobile.min.js"></script>
+	<script type="text/javascript" src="js/wow/wow.min.js"></script>
+	<!--[if lt IE 9]>
+			<script src="bootstrap-3.0.0/assets/js/html5shiv.js"></script>
+			<script src="bootstrap-3.0.0/assets/js/respond.min.js"></script>
+		<![endif]-->
 </body>
 
 </html>

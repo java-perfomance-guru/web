@@ -31,13 +31,13 @@ $(document).ready(function () {
    new $.scrolldeck({
         buttons: '.nav-button',
         slides: '.slide',
-        duration: 600,
+        duration: 300,
         easing: 'easeInOutExpo',
         offset: 0
     });
 
     $(".btn-slide").click(function () {
-//        $(".menu").slideToggle("slow");
+       $(".menu").slideToggle("slow");
         $(".nav_up").toggleClass("nav");
         $(this).toggleClass("active");
     });
