@@ -1774,6 +1774,16 @@
 <script src="bootstrap-3.0.0/assets/js/respond.min.js"></script>
 <![endif]-->
 
+<!--<script>-->
+  <!--(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){-->
+  <!--(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),-->
+  <!--m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)-->
+  <!--})(window,document,'script','//www.google-analytics.com/analytics.js','ga');-->
+
+  <!--ga('create', 'UA-2363606-14', 'auto');-->
+  <!--ga('send', 'pageview');-->
+
+<!--</script>-->
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -1785,6 +1795,277 @@
   ga('send', 'pageview');
 
 </script>
+
+<!--<script>-->
+<!--$(document).ready(function() {-->
+    <!--//cache window-->
+    <!--$window=$(window);-->
+    <!--replaceWithpath class="path" class="path class="path""s($('svg'));-->
+    <!--var $tick=$("#ticker span"),-->
+        <!--$top= $(window).scrollTop(),-->
+        <!--$depth=$(document.body).offsetHeight;-->
+    <!--hideSVGpath class="path" class="path class="path""s($('svg'));-->
+    <!--$(window).bind('scroll',function(e){-->
+        <!--$top= $(window).scrollTop();-->
+        <!--$tick.html($top);-->
+
+
+        <!--if($top > 0 && $top <1000){  //SLIDE 1-->
+                <!--//grab existing element offset top value-->
+                <!--var $v1top=$('#v1').offset().top;-->
+
+            <!--$('#v1').css({-->
+                <!--"top": (200-(-$top*.1))+"px",-->
+                <!--"opacity":(1-($top*.001))-->
+            <!--})-->
+        <!--}-->
+      <!--if($top <100000){ //SLIDE 2-->
+          <!--var $slide2=$top;-->
+          <!--$('#v2').css({-->
+                <!--"top": (($slide2*.01))+"px"-->
+            <!--})-->
+          <!--scrollSVGpath class="path" class="path class="path""s($('svg'),$slide2);-->
+
+
+        <!--}-->
+    <!--});-->
+
+<!--});-->
+
+<!--//////////////////////////-->
+
+
+<!--jQuery.extend( jQuery.easing,-->
+<!--{-->
+    <!--easeInOutQuad: function (x, t, b, c, d) {-->
+        <!--if ((t/=d/2) < 1) return c/2*t*t + b;-->
+        <!--return -c/2 * ((--t)*(t-2) - 1) + b;-->
+  <!--}-->
+<!--});-->
+
+
+<!--//Adding SVG elements to DOM..-->
+<!--function SVG(tag) {-->
+    <!--return document.createElementNS('http://www.w3.org/2000/svg', tag);-->
+<!--}-->
+
+<!--//Reset if needed for manual animations..-->
+<!--function hideSVGpath class="path" class="path class="path""s(parentElement) {-->
+
+    <!--var path class="path" class="path class="path""s = $(parentElement).find('path class="path" class="path class="path""');-->
+
+    <!--//for each path class="path" class="path class="path""..-->
+    <!--$.each( path class="path" class="path class="path""s, function() {-->
+
+        <!--//get the total length-->
+        <!--var totalLength = this.getTotalLength();-->
+
+        <!--//set path class="path" class="path class="path""s to invisible-->
+        <!--$(this).css({-->
+            <!--'stroke-dashoffset': totalLength,-->
+            <!--'stroke-dasharray': totalLength + ' ' + totalLength-->
+        <!--});-->
+    <!--});-->
+<!--}-->
+
+<!--function scrollSVGpath class="path" class="path class="path""s(_parentElement,scroll) {-->
+    <!--//capture path class="path" class="path class="path""..-->
+    <!--var path class="path" class="path class="path""s = $(_parentElement).find('path class="path" class="path class="path""');-->
+
+    <!--//for each path class="path" class="path class="path""..-->
+    <!--$.each( path class="path" class="path class="path""s, function(i) {-->
+
+        <!--//get the total length-->
+        <!--var totalLength = this.getTotalLength();-->
+        <!--var appearDampener= .05;-->
+        <!--var singlePercent= (totalLength*0.01)*scroll;-->
+        <!--var singlePoint = Math.max(0, Math.min(singlePercent*appearDampener,totalLength));-->
+      <!--//Reset: set path class="path" class="path class="path""s to invisible-->
+        <!--$(this).css({-->
+            <!--'stroke-dashoffset': totalLength-singlePoint,-->
+            <!--'stroke-dasharray': totalLength-->
+        <!--});-->
+
+    <!--});-->
+<!--}-->
+
+
+<!--//Converts SVG elements to path class="path" class="path class="path""s if not done manually..-->
+
+<!--function replaceRectsWithpath class="path" class="path class="path""s(parentElement) {-->
+
+
+    <!--var rects = $(parentElement).find('rect');-->
+
+    <!--$.each(rects, function() {-->
+
+        <!--var rectX = $(this).attr('x');-->
+        <!--var rectY = $(this).attr('y');-->
+
+        <!--var rectX2 = parseFloat(rectX) + parseFloat($(this).attr('width'));-->
+        <!--var rectY2 = parseFloat(rectY) + parseFloat($(this).attr('height'));-->
+
+        <!--var convertedpath class="path" class="path class="path"" = 'M' + rectX + ',' + rectY + ' ' + rectX2 + ',' + rectY + ' ' + rectX2 + ',' + rectY2 + ' ' + rectX + ',' + rectY2 + ' ' + rectX + ',' + rectY;-->
+
+
+        <!--$(SVG('path class="path" class="path class="path""'))-->
+        <!--.attr('d', convertedpath class="path" class="path class="path"")-->
+        <!--.attr('fill', $(this).attr('fill'))-->
+        <!--.attr('stroke', $(this).attr('stroke'))-->
+        <!--.attr('stroke-width', $(this).attr('stroke-width'))-->
+        <!--.insertAfter(this);-->
+
+    <!--});-->
+
+    <!--$(rects).remove();-->
+<!--}-->
+
+
+
+<!--function replaceLinesWithpath class="path" class="path class="path""s(parentElement) {-->
+
+
+    <!--var lines = $(parentElement).find('line');-->
+
+    <!--$.each(lines, function() {-->
+
+        <!--var lineX1 = $(this).attr('x1');-->
+        <!--var lineY1 = $(this).attr('y1');-->
+
+        <!--var lineX2 = $(this).attr('x2');-->
+        <!--var lineY2 = $(this).attr('y2');-->
+
+        <!--var convertedpath class="path" class="path class="path"" = 'M' + lineX1 + ',' + lineY1 + ' ' + lineX2 + ',' + lineY2;-->
+
+
+        <!--$(SVG('path class="path" class="path class="path""'))-->
+        <!--.attr('d', convertedpath class="path" class="path class="path"")-->
+        <!--.attr('fill', $(this).attr('fill'))-->
+        <!--.attr('stroke', $(this).attr('stroke'))-->
+        <!--.attr('stroke-width', $(this).attr('stroke-width'))-->
+        <!--.insertAfter(this);-->
+
+    <!--});-->
+
+    <!--$(lines).remove();-->
+<!--}-->
+
+
+
+<!--function replaceCirclesWithpath class="path" class="path class="path""s(parentElement) {-->
+
+    <!--var circles = $(parentElement).find('circle');-->
+
+    <!--$.each(circles, function() {-->
+
+        <!--var cX = $(this).attr('cx');-->
+        <!--var cY = $(this).attr('cy');-->
+        <!--var r = $(this).attr('r');-->
+        <!--var r2 = parseFloat(r * 2);-->
+
+        <!--var convertedpath class="path" class="path class="path"" = 'M' + cX + ', ' + cY + ' m' + (-r) + ', 0 ' + 'a ' + r + ', ' + r + ' 0 1,0 ' + r2 + ',0 ' + 'a ' + r + ', ' + r + ' 0 1,0 ' + (-r2) + ',0 ';-->
+
+        <!--$(SVG('path class="path" class="path class="path""'))-->
+        <!--.attr('d', convertedpath class="path" class="path class="path"")-->
+        <!--.attr('fill', $(this).attr('fill'))-->
+        <!--.attr('stroke', $(this).attr('stroke'))-->
+        <!--.attr('stroke-width', $(this).attr('stroke-width'))-->
+        <!--.insertAfter(this);-->
+
+    <!--});-->
+
+    <!--$(circles).remove();-->
+<!--}-->
+
+
+
+<!--function replaceEllipsesWithpath class="path" class="path class="path""s(parentElement) {-->
+
+
+    <!--var ellipses = $(parentElement).find('ellipse');-->
+
+    <!--$.each(ellipses, function() {-->
+
+        <!--var cX = $(this).attr('cx');-->
+        <!--var cY = $(this).attr('cy');-->
+        <!--var rX = $(this).attr('rx');-->
+        <!--var rY = $(this).attr('ry');-->
+
+        <!--var convertedpath class="path" class="path class="path"" = 'M' + cX + ', ' + cY + ' m' + (-rX) + ', 0 ' + 'a ' + rX + ', ' + rY + ' 0 1,0 ' + rX*2 + ',0 ' + 'a ' + rX + ', ' + rY + ' 0 1,0 ' + (-rX*2) + ',0 ';-->
+
+        <!--$(SVG('path class="path" class="path class="path""'))-->
+        <!--.attr('d', convertedpath class="path" class="path class="path"")-->
+        <!--.attr('fill', $(this).attr('fill'))-->
+        <!--.attr('stroke', $(this).attr('stroke'))-->
+        <!--.attr('stroke-width', $(this).attr('stroke-width'))-->
+        <!--.insertAfter(this);-->
+
+    <!--});-->
+
+    <!--$(ellipses).remove();-->
+<!--}-->
+
+
+
+
+<!--function replacePolygonsWithpath class="path" class="path class="path""s(parentElement) {-->
+
+
+    <!--var polygons = $(parentElement).find('polygon');-->
+
+    <!--$.each(polygons, function() {-->
+
+        <!--var points = $(this).attr('points');-->
+        <!--var polyPoints = points.split(/[ ,]+/);-->
+        <!--var endPoint = polyPoints[0] + ', ' + polyPoints[1];-->
+
+        <!--$(SVG('path class="path" class="path class="path""'))-->
+        <!--.attr('d', 'M' + points + ' ' + endPoint)-->
+        <!--.attr('fill', $(this).attr('fill'))-->
+        <!--.attr('stroke', $(this).attr('stroke'))-->
+        <!--.attr('stroke-width', $(this).attr('stroke-width'))-->
+        <!--.insertAfter(this);-->
+
+    <!--});-->
+
+    <!--$(polygons).remove();-->
+<!--}-->
+
+
+
+
+<!--function replacePolylinesWithpath class="path" class="path class="path""s(parentElement) {-->
+
+
+    <!--var polylines = $(parentElement).find('polyline');-->
+
+    <!--$.each(polylines, function() {-->
+
+        <!--var points = $(this).attr('points');-->
+
+        <!--$(SVG('path class="path" class="path class="path""'))-->
+        <!--.attr('d', 'M' + points)-->
+        <!--.attr('fill', $(this).attr('fill'))-->
+        <!--.attr('stroke', $(this).attr('stroke'))-->
+        <!--.attr('stroke-width', $(this).attr('stroke-width'))-->
+        <!--.insertAfter(this);-->
+
+    <!--});-->
+
+    <!--$(polylines).remove();-->
+<!--}-->
+
+<!--function replaceWithpath class="path" class="path class="path""s(parentElement) {-->
+
+    <!--replaceRectsWithpath class="path" class="path class="path""s(parentElement);-->
+    <!--replaceLinesWithpath class="path" class="path class="path""s(parentElement);-->
+    <!--replaceEllipsesWithpath class="path" class="path class="path""s(parentElement);-->
+    <!--replaceCirclesWithpath class="path" class="path class="path""s(parentElement);-->
+    <!--replacePolygonsWithpath class="path" class="path class="path""s(parentElement);-->
+    <!--replacePolylinesWithpath class="path" class="path class="path""s(parentElement);-->
+<!--}-->
+<!--</script>-->
+
 
 
 </body>
